@@ -4,8 +4,8 @@ import pickle as pk
 import math
 import json
 
-INPUT_FILE = r"C:\Users\kmkus_4e9n0iq\Desktop\Coding\moleculardata\test_input.json"
-OUTPUT_FILE = r"C:\Users\kmkus_4e9n0iq\Desktop\Coding\moleculardata\output.txt"
+INPUT_FILE = r"\moleculardata\test_input.json"
+OUTPUT_FILE = r"\moleculardata\output.txt"
 PERIODIC_TABLE = {
     'H':[1, 1.0079],
     'C':[6, 12.0107],
