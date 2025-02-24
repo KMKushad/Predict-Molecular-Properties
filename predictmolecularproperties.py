@@ -6,6 +6,7 @@ import json
 
 INPUT_FILE = r"\moleculardata\test_input.json"
 OUTPUT_FILE = r"\moleculardata\output.txt"
+MAX_N_ATOMS = 50
 PERIODIC_TABLE = {
     'H':[1, 1.0079],
     'C':[6, 12.0107],
@@ -28,7 +29,7 @@ def load_molecule():
 def distance_matrix(molecule):
     coords = [np.array(atom["xyz"]) for atom in molecule["atoms"]]
     n_atoms = len(coords)
-    distance_matrix = np.zeros((n_atoms, n_atoms))
+    distance_matrix = np.zeros((MAX_N_ATOMS, MAX_N_ATOMS))
     for x in range(n_atoms):
         for y in range(n_atoms):
             distance_matrix[x][y] = math.sqrt(np.sum(np.power(coords[x] - coords[y], 2)))
